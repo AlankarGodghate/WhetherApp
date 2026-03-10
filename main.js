@@ -6,7 +6,7 @@ const Api_key = "df86fec8f4eda4b1e244cc4c9b29a7d8"
 async function get() {
 let input = document.querySelector("input");
 let city = input.value.toLowerCase().trim();
-  let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_key}&units=metric`)
+ let data = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_key}&units=metric`)}`);
   let finalData = await data.json()
   console.log(finalData)
   let main_div = document.createElement("main_div");
