@@ -9,6 +9,7 @@ let city = input.value.toLowerCase().trim();
  let data = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_key}&units=metric`)}`);
   let finalData = await data.json()
   console.log(finalData)
+ 
   let main_div = document.createElement("main_div");
   main_div.style.height = "400px";
   main_div.style.width = "80" + "%";
@@ -168,11 +169,7 @@ gust.style.alignItems = "center";
  gust.style.fontSize= "17px";
  gust.style.fontWeight = "700";
 
-  
-
-
- 
-  main_div.appendChild(name_div)
+ main_div.appendChild(name_div)
   main_div.appendChild(temp_div)
   main_div.appendChild(temp_min)
   main_div.appendChild(temp_max)
@@ -182,6 +179,13 @@ gust.style.alignItems = "center";
  main_div.appendChild(speed)
   main_div.appendChild(deg)
   main_div.appendChild(gust)
+
+}
+
+
+
+
+ 
+  
    
   
-}
